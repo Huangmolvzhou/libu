@@ -2067,7 +2067,7 @@ table.data .share { display: inline-block; height: 6px; border-radius: 1px; back
     var v = Number(n) || 0;
     var abs = Math.abs(v);
     var s = abs % 1 === 0 ? String(abs) : abs.toFixed(2);
-    // 千分位：宁宁看的都是几千几万，加逗号更容易扫
+    // 千分位：金额多是几千几万，加逗号更容易扫
     s = s.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     return (v < 0 ? '-' : '') + '¥' + s;
   };
@@ -2393,7 +2393,7 @@ table.data .share { display: inline-block; height: 6px; border-radius: 1px; back
             '<h2>' + year + ' 年</h2>' +
             '<span class="hint">' + sum.count + ' 笔 · ' + sum.people + ' 位往来对象</span>' +
             '<span class="spacer"></span>' +
-            '<span class="hint">' + greeting() + '，宁宁</span>' +
+            '<span class="hint">' + greeting() + '</span>' +
           '</div>' +
           '<div class="summary">' +
             '<div><div class="label">总收礼</div><div class="value num pos">' + ui.money(sum.received) + '</div>' +
